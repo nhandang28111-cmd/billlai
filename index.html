@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BitTap PnL Mockup Final</title>
+  <title>BitTap PnL Mockup Random BG</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -13,7 +13,7 @@
         <div class="mark">BT</div>
         <div>
           <h1>BitTap PnL Mockup</h1>
-          <p>Form tạo ảnh PnL phong cách app</p>
+          <p>Random avatar · random nền · tải ảnh 4K</p>
         </div>
       </div>
 
@@ -26,36 +26,36 @@
           </label>
           <label>Lệnh
             <select id="side">
-              <option value="Long">Long / Mua</option>
-              <option value="Short" selected>Short / Bán</option>
+              <option value="Long" selected>Long / Nhiều</option>
+              <option value="Short">Short / Ngắn</option>
             </select>
           </label>
         </div>
 
         <div class="grid">
           <label>Đòn bẩy
-            <input id="lev" type="number" value="400">
+            <input id="lev" type="number" value="75">
           </label>
           <label>Vốn USDT
-            <input id="capital" type="number" value="10" step="0.01">
+            <input id="capital" type="number" value="470.5" step="0.01">
           </label>
         </div>
 
         <div class="grid">
           <label>Giá vào
-            <input id="entry" type="number" value="77092.7" step="0.1">
+            <input id="entry" type="number" value="70575.9" step="0.1">
           </label>
           <label>Giá hiện tại
-            <input id="markPrice" type="number" value="77779.1" step="0.1">
+            <input id="markPrice" type="number" value="74344.0" step="0.1">
           </label>
         </div>
 
         <div class="grid">
           <label>Tên ẩn
-            <input id="userName" value="****675">
+            <input id="userName" value="****717">
           </label>
           <label>Mã mời
-            <input id="invite" value="QTNMZZFP">
+            <input id="invite" value="64QUJHK3">
           </label>
         </div>
 
@@ -73,6 +73,8 @@
         <div class="actions">
           <button id="createBtn" type="button">Tạo ảnh</button>
           <button id="avatarBtn" type="button">Random avatar</button>
+          <button id="bgBtn" type="button">Random nền</button>
+          <button id="allBtn" type="button">Random full</button>
           <button id="downloadBtn" type="button">Tải PNG 4K</button>
         </div>
       </div>
@@ -85,25 +87,25 @@
             <div class="avatar">
               <img id="avatarImg" src="assets/avatar/avatar1.png" alt="avatar">
             </div>
-            <strong id="outName">****675</strong>
+            <strong id="outName">****717</strong>
           </div>
-          <strong id="outTime">2026-04-23 11:16:00</strong>
+          <strong id="outTime">2026-04-14 09:26:47</strong>
         </div>
 
-        <div class="main">
+        <div id="mainArea" class="main bg-rocket">
           <h2 id="outCoin">BTC-USDT-M Không kỳ hạn</h2>
 
           <div class="badges">
-            <span id="outSide" class="badge short">Ngắn</span>
-            <span id="outLev" class="badge lev">400X</span>
+            <span id="outSide" class="badge long">Nhiều</span>
+            <span id="outLev" class="badge lev">75X</span>
           </div>
 
-          <div id="outPnl" class="pnl loss">-3,683.01 <small>USDT</small></div>
-          <div id="outRoi" class="roi loss">-368.30%</div>
+          <div id="outPnl" class="pnl profit">+1,884.01 <small>USDT</small></div>
+          <div id="outRoi" class="roi profit">+400.42%</div>
 
           <div class="prices">
-            <div><span>Giá mở lệnh</span><b id="outEntry">77,092.7</b></div>
-            <div><span id="priceText">Giá đóng TB</span><b id="outMark">77,779.1</b></div>
+            <div><span>Giá mở lệnh</span><b id="outEntry">70,575.9</b></div>
+            <div><span id="priceText">Giá đánh dấu</span><b id="outMark">74,344.0</b></div>
           </div>
 
           <div class="mockup-note">MARKETING MOCKUP</div>
@@ -111,9 +113,9 @@
 
         <div class="bottom">
           <div class="bottom-left">
-            <p>Mã mời <b id="outInvite">QTNMZZFP</b></p>
+            <p>Mã mời <b id="outInvite">64QUJHK3</b></p>
             <div class="brand-row">
-              <img src="assets/logo.svg" class="brand-logo" alt="logo">
+              <img src="assets/logo.png" class="brand-logo" alt="logo">
               <span>BitTap</span>
             </div>
           </div>
