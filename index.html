@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BitTap PnL Mockup Final</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <section class="controls">
+      <div class="title">
+        <div class="mark">BT</div>
+        <div>
+          <h1>BitTap PnL Mockup</h1>
+          <p>Form tạo ảnh PnL phong cách app</p>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="box-title">Thông tin lệnh</div>
+
+        <div class="grid">
+          <label>Coin
+            <input id="coin" value="BTC-USDT-M">
+          </label>
+          <label>Lệnh
+            <select id="side">
+              <option value="Long">Long / Mua</option>
+              <option value="Short" selected>Short / Bán</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="grid">
+          <label>Đòn bẩy
+            <input id="lev" type="number" value="400">
+          </label>
+          <label>Vốn USDT
+            <input id="capital" type="number" value="10" step="0.01">
+          </label>
+        </div>
+
+        <div class="grid">
+          <label>Giá vào
+            <input id="entry" type="number" value="77092.7" step="0.1">
+          </label>
+          <label>Giá hiện tại
+            <input id="markPrice" type="number" value="77779.1" step="0.1">
+          </label>
+        </div>
+
+        <div class="grid">
+          <label>Tên ẩn
+            <input id="userName" value="****675">
+          </label>
+          <label>Mã mời
+            <input id="invite" value="QTNMZZFP">
+          </label>
+        </div>
+
+        <label>Thời gian
+          <div class="inline">
+            <input id="time">
+            <button id="nowBtn" type="button">Lấy giờ</button>
+          </div>
+        </label>
+
+        <label>QR text/link
+          <input id="qrText" value="https://t.me/logancrypto">
+        </label>
+
+        <div class="actions">
+          <button id="createBtn" type="button">Tạo ảnh</button>
+          <button id="avatarBtn" type="button">Random avatar</button>
+          <button id="downloadBtn" type="button">Tải PNG 4K</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="preview">
+      <div id="bill" class="bill">
+        <div class="top">
+          <div class="profile">
+            <div class="avatar">
+              <img id="avatarImg" src="assets/avatar/avatar1.png" alt="avatar">
+            </div>
+            <strong id="outName">****675</strong>
+          </div>
+          <strong id="outTime">2026-04-23 11:16:00</strong>
+        </div>
+
+        <div class="main">
+          <h2 id="outCoin">BTC-USDT-M Không kỳ hạn</h2>
+
+          <div class="badges">
+            <span id="outSide" class="badge short">Ngắn</span>
+            <span id="outLev" class="badge lev">400X</span>
+          </div>
+
+          <div id="outPnl" class="pnl loss">-3,683.01 <small>USDT</small></div>
+          <div id="outRoi" class="roi loss">-368.30%</div>
+
+          <div class="prices">
+            <div><span>Giá mở lệnh</span><b id="outEntry">77,092.7</b></div>
+            <div><span id="priceText">Giá đóng TB</span><b id="outMark">77,779.1</b></div>
+          </div>
+
+          <div class="mockup-note">MARKETING MOCKUP</div>
+        </div>
+
+        <div class="bottom">
+          <div class="bottom-left">
+            <p>Mã mời <b id="outInvite">QTNMZZFP</b></p>
+            <div class="brand-row">
+              <img src="assets/logo.svg" class="brand-logo" alt="logo">
+              <span>BitTap</span>
+            </div>
+          </div>
+          <img id="qr" class="qr" alt="qr">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
