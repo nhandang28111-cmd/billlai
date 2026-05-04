@@ -72,7 +72,7 @@ input:focus,select:focus{border-color:#84cc16;box-shadow:0 0 0 4px rgba(132,204,
 .bottom{height:200px;background:#fff;color:#000;padding:42px 48px;display:flex;align-items:center;justify-content:space-between}
 .bottom p{margin:0 0 24px;color:#c9c9c9;font-size:31px;font-weight:950}.bottom p b{color:#000;margin-left:18px}
 .brand-row{display:flex;align-items:center;gap:13px;font-size:42px;font-weight:950;letter-spacing:-1px}
-.brand-logo{width:45px;height:45px;object-fit:contain;mix-blend-mode:multiply}
+.brand-logo{width:80px;height:80px;object-fit:contain;mix-blend-mode:multiply}
 .qr{width:135px;height:135px;image-rendering:pixelated}
 .bill.exporting{transform:none!important}
 @media(max-width:1100px){.app{grid-template-columns:1fr}.bill{transform-origin:top center;transform:scale(.78);margin-bottom:-220px}}
