@@ -7,6 +7,8 @@ const avatars = [
   "assets/avatar/avatar4.png"
 ];
 
+const backgrounds = ["bg-rocket", "bg-chart"];
+
 function pad(n){ return String(n).padStart(2,"0"); }
 
 function setNow(){
@@ -23,6 +25,18 @@ function fmt(n, d=1){
 
 function randomAvatar(){
   $("avatarImg").src = avatars[Math.floor(Math.random() * avatars.length)];
+}
+
+function randomBackground(){
+  const main = $("mainArea");
+  main.classList.remove(...backgrounds);
+  main.classList.add(backgrounds[Math.floor(Math.random() * backgrounds.length)]);
+}
+
+function randomAll(){
+  randomAvatar();
+  randomBackground();
+  calculate();
 }
 
 function calculate(){
@@ -42,7 +56,7 @@ function calculate(){
   const pnl = capital * roi / 100;
   const positive = pnl >= 0;
 
-  $("outName").textContent = $("userName").value || "****675";
+  $("outName").textContent = $("userName").value || "****717";
   $("outTime").textContent = $("time").value;
   $("outCoin").textContent = ($("coin").value || "BTC-USDT-M") + " Không kỳ hạn";
   $("outSide").textContent = side === "Long" ? "Nhiều" : "Ngắn";
@@ -58,7 +72,7 @@ function calculate(){
   $("outEntry").textContent = fmt(entry, 1);
   $("outMark").textContent = fmt(mark, 1);
   $("priceText").textContent = side === "Long" ? "Giá đánh dấu" : "Giá đóng TB";
-  $("outInvite").textContent = $("invite").value || "QTNMZZFP";
+  $("outInvite").textContent = $("invite").value || "64QUJHK3";
 
   const qrText = $("qrText").value || $("invite").value || "BITTAP";
   $("qr").src = "https://api.qrserver.com/v1/create-qr-code/?size=240x240&margin=1&data=" + encodeURIComponent(qrText);
@@ -68,19 +82,27 @@ async function download4K(){
   const bill = $("bill");
   bill.classList.add("exporting");
 
-  const canvas = await html2canvas(bill, {
-    scale: 4,
-    backgroundColor: null,
-    useCORS: true,
-    logging: false
-  });
+  try{
+    const canvas = await html2canvas(bill, {
+      scale: 4,
+      backgroundColor: null,
+      useCORS: true,
+      allowTaint: true,
+      logging: false
+    });
 
-  bill.classList.remove("exporting");
-
-  const a = document.createElement("a");
-  a.download = "bittap-pnl-mockup-4k.png";
-  a.href = canvas.toDataURL("image/png", 1);
-  a.click();
+    const a = document.createElement("a");
+    a.download = "bittap-pnl-mockup-4k.png";
+    a.href = canvas.toDataURL("image/png", 1);
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+  }catch(e){
+    alert("Không tải được ảnh. Hãy mở bằng Live Server hoặc chạy qua localhost.");
+    console.error(e);
+  }finally{
+    bill.classList.remove("exporting");
+  }
 }
 
 ["coin","side","lev","capital","entry","markPrice","userName","invite","time","qrText"]
@@ -89,8 +111,9 @@ async function download4K(){
 $("nowBtn").addEventListener("click", () => { setNow(); calculate(); });
 $("createBtn").addEventListener("click", calculate);
 $("avatarBtn").addEventListener("click", () => { randomAvatar(); calculate(); });
+$("bgBtn").addEventListener("click", () => { randomBackground(); calculate(); });
+$("allBtn").addEventListener("click", randomAll);
 $("downloadBtn").addEventListener("click", download4K);
 
 setNow();
-randomAvatar();
-calculate();
+randomAll();
