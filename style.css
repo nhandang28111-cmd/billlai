@@ -27,7 +27,7 @@ input:focus,select:focus{border-color:#84cc16;box-shadow:0 0 0 4px rgba(132,204,
   overflow:hidden;
 }
 
-/* NỀN 1: ROCKET (đã căn chuẩn) */
+/* 🚀 NỀN ROCKET */
 .bg-rocket{
   background:
     linear-gradient(
@@ -37,10 +37,11 @@ input:focus,select:focus{border-color:#84cc16;box-shadow:0 0 0 4px rgba(132,204,
       rgba(0,0,0,0.5) 65%,
       rgba(0,0,0,0.2) 100%
     ),
-    url("assets/bg/bg2.png") right -10px center / 85% no-repeat;
+    url("assets/bg/bg2.png")
+    right 80px top -40px / 80% no-repeat;
 }
 
-/* NỀN 2: CHART */
+/* 📈 NỀN CHART */
 .bg-chart{
   background:
     linear-gradient(
@@ -50,7 +51,8 @@ input:focus,select:focus{border-color:#84cc16;box-shadow:0 0 0 4px rgba(132,204,
       rgba(0,0,0,0.5) 65%,
       rgba(0,0,0,0.2) 100%
     ),
-    url("assets/bg/bg1.png") right -60px center / 100% no-repeat;
+    url("assets/bg/bg1.png")
+    right 60px top -30px / 95% no-repeat;
 }
 .main:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 78% 64%,rgba(196,255,0,.15),transparent 34%);pointer-events:none}
 .bg-rocket{background:linear-gradient(90deg,rgba(0,0,0,1) 0%,rgba(0,0,0,.98) 42%,rgba(0,0,0,.58) 64%,rgba(0,0,0,.18) 100%),url("assets/bg/bg2.png") right -70px center/cover no-repeat}
