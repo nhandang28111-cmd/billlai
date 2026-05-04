@@ -20,7 +20,38 @@ input:focus,select:focus{border-color:#84cc16;box-shadow:0 0 0 4px rgba(132,204,
 .avatar{width:115px;height:115px;border-radius:50%;border:5px solid #fff;background:#d84a48;overflow:hidden;box-shadow:0 12px 28px rgba(0,0,0,.38)}
 .avatar img{width:100%;height:100%;object-fit:cover;display:block}
 .top>strong{font-size:28px;color:#969da8;margin-top:22px}
-.main{height:585px;position:relative;padding:68px 48px;background-repeat:no-repeat;background-size:cover}
+.main{
+  height:585px;
+  position:relative;
+  padding:68px 48px;
+  overflow:hidden;
+}
+
+/* NỀN 1: ROCKET (đã căn chuẩn) */
+.bg-rocket{
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0,0,0,1) 0%,
+      rgba(0,0,0,0.97) 45%,
+      rgba(0,0,0,0.5) 65%,
+      rgba(0,0,0,0.2) 100%
+    ),
+    url("assets/bg/bg2.png") right -10px center / 85% no-repeat;
+}
+
+/* NỀN 2: CHART */
+.bg-chart{
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0,0,0,1) 0%,
+      rgba(0,0,0,0.97) 45%,
+      rgba(0,0,0,0.5) 65%,
+      rgba(0,0,0,0.2) 100%
+    ),
+    url("assets/bg/bg1.png") right -60px center / 100% no-repeat;
+}
 .main:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 78% 64%,rgba(196,255,0,.15),transparent 34%);pointer-events:none}
 .bg-rocket{background:linear-gradient(90deg,rgba(0,0,0,1) 0%,rgba(0,0,0,.98) 42%,rgba(0,0,0,.58) 64%,rgba(0,0,0,.18) 100%),url("assets/bg/bg2.png") right -70px center/cover no-repeat}
 .bg-chart{background:linear-gradient(90deg,rgba(0,0,0,1) 0%,rgba(0,0,0,.98) 42%,rgba(0,0,0,.58) 64%,rgba(0,0,0,.18) 100%),url("assets/bg/bg1.png") right -88px center/cover no-repeat}
